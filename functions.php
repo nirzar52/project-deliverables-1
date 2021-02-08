@@ -167,7 +167,7 @@ add_action( 'widgets_init', 'sampletheme_widgets_init' );
 function sampletheme_scripts() {
 	wp_enqueue_style( 'sampletheme-style', get_stylesheet_uri(), array(), _S_VERSION );
 
-	// Foundation
+	// added Foundation
 	wp_enqueue_style( 'foundation-style', get_stylesheet_uri(), '/assets/css/vendor/foundation.css' );
 	wp_enqueue_style( 'foundation-script', get_stylesheet_uri(), '/assets/js/vendor/foundations.js', array(), false, true );
 
