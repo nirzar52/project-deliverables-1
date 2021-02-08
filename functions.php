@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Sample_Theme
+ * @package nirzarpatel_Theme
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
-if ( ! function_exists( 'sampletheme_setup' ) ) :
+if ( ! function_exists( 'nirzarpateltheme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -20,14 +20,14 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function sampletheme_setup() {
+	function nirzarpateltheme_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Sample Theme, use a find and replace
-		 * to change 'sampletheme' to the name of your theme in all the template files.
+		 * to change 'nirzarpateltheme' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'sampletheme', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'nirzarpateltheme', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -50,7 +50,7 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-primary' => esc_html__( 'Primary', 'sampletheme' ),
+				'menu-primary' => esc_html__( 'Primary', 'nirzarpateltheme' ),
 			)
 		);
 
@@ -97,12 +97,12 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 
 		add_theme_support( 'editor-color-palette', array(
 			array(
-				'name' => esc_attr__( 'Magenta', 'sampletheme' ),
+				'name' => esc_attr__( 'Magenta', 'nirzarpateltheme' ),
 				'slug' => 'magenta',
 				'color' => '#a156b4',
 			),
 			array(
-				'name' => esc_attr__( 'Blue', 'sampletheme' ),
+				'name' => esc_attr__( 'Blue', 'nirzarpateltheme' ),
 				'slug' => 'blue',
 				'color' => '#768496',
 			),
@@ -126,7 +126,7 @@ if ( ! function_exists( 'sampletheme_setup' ) ) :
 	remove_theme_support( 'core-block-patterns' );
 }
 endif;
-add_action( 'after_setup_theme', 'sampletheme_setup' );
+add_action( 'after_setup_theme', 'nirzarpateltheme_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -135,22 +135,22 @@ add_action( 'after_setup_theme', 'sampletheme_setup' );
  *
  * @global int $content_width
  */
-function sampletheme_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'sampletheme_content_width', 640 );
+function nirzarpateltheme_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'nirzarpateltheme_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'sampletheme_content_width', 0 );
+add_action( 'after_setup_theme', 'nirzarpateltheme_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function sampletheme_widgets_init() {
+function nirzarpateltheme_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'sampletheme' ),
+			'name'          => esc_html__( 'Sidebar', 'nirzarpateltheme' ),
 			'id'            => 'sidebar',
-			'description'   => esc_html__( 'Add widgets here.', 'sampletheme' ),
+			'description'   => esc_html__( 'Add widgets here.', 'nirzarpateltheme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -158,14 +158,14 @@ function sampletheme_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'sampletheme_widgets_init' );
+add_action( 'widgets_init', 'nirzarpateltheme_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
 
-function sampletheme_scripts() {
-	wp_enqueue_style( 'sampletheme-style', get_stylesheet_uri(), array(), _S_VERSION );
+function nirzarpateltheme_scripts() {
+	wp_enqueue_style( 'nirzarpateltheme-style', get_stylesheet_uri(), array(), _S_VERSION );
 
 	// added Foundation
 	wp_enqueue_style( 'foundation-style', get_stylesheet_uri(), '/assets/css/vendor/foundation.css' );
@@ -179,7 +179,7 @@ function sampletheme_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'sampletheme_scripts' );
+add_action( 'wp_enqueue_scripts', 'nirzarpateltheme_scripts' );
 
 /**
  * Custom template tags for this theme.
@@ -198,21 +198,21 @@ require get_template_directory() . '/inc/customizer.php';
 
 // Enqueuinh block editor assets
 
-function sampletheme_enqueue_block_editor_assets() {
+function nirzarpateltheme_enqueue_block_editor_assets() {
     wp_enqueue_script(
         'editor-script',
 		get_template_directory_uri() . '/assets/js/editor.js',
 		array('wp-blocks','wp-dom-ready','wp-edit-post')
 	);
 }
-add_action( 'enqueue_block_editor_assets', 'sampletheme_enqueue_block_editor_assets' );
+add_action( 'enqueue_block_editor_assets', 'nirzarpateltheme_enqueue_block_editor_assets' );
 
 // Enqueing Block assets
 
-function sampletheme_enqueue_block_assets() {
+function nirzarpateltheme_enqueue_block_assets() {
     wp_enqueue_style( 
 		'blocks-style', 
 		get_template_directory_uri() . '/assets/css/blocks.css' 
 	);
 }
-add_action( 'enqueue_block_assets', 'sampletheme_enqueue_block_assets' );
+add_action( 'enqueue_block_assets', 'nirzarpateltheme_enqueue_block_assets' );

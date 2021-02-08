@@ -2,7 +2,7 @@
 /**
  * Sample Theme Theme Customizer
  *
- * @package Sample_Theme
+ * @package nirzarpatel_Theme
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function sampletheme_customize_register( $wp_customize ) {
+function nirzarpateltheme_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
@@ -19,26 +19,26 @@ function sampletheme_customize_register( $wp_customize ) {
 			'blogname',
 			array(
 				'selector'        => '.site-title a',
-				'render_callback' => 'sampletheme_customize_partial_blogname',
+				'render_callback' => 'nirzarpateltheme_customize_partial_blogname',
 			)
 		);
 		$wp_customize->selective_refresh->add_partial(
 			'blogdescription',
 			array(
 				'selector'        => '.site-description',
-				'render_callback' => 'sampletheme_customize_partial_blogdescription',
+				'render_callback' => 'nirzarpateltheme_customize_partial_blogdescription',
 			)
 		);
 	}
 }
-add_action( 'customize_register', 'sampletheme_customize_register' );
+add_action( 'customize_register', 'nirzarpateltheme_customize_register' );
 
 /**
  * Render the site title for the selective refresh partial.
  *
  * @return void
  */
-function sampletheme_customize_partial_blogname() {
+function nirzarpateltheme_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
@@ -47,14 +47,14 @@ function sampletheme_customize_partial_blogname() {
  *
  * @return void
  */
-function sampletheme_customize_partial_blogdescription() {
+function nirzarpateltheme_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function sampletheme_customize_preview_js() {
-	wp_enqueue_script( 'sampletheme-customizer', get_template_directory_uri() . 'assets/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+function nirzarpateltheme_customize_preview_js() {
+	wp_enqueue_script( 'nirzarpateltheme-customizer', get_template_directory_uri() . 'assets/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
 }
-add_action( 'customize_preview_init', 'sampletheme_customize_preview_js' );
+add_action( 'customize_preview_init', 'nirzarpateltheme_customize_preview_js' );

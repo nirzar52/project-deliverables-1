@@ -6,23 +6,23 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Sample_Theme
+ * @package nirzarpatel_Theme
  */
 
 ?>
 </div>
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sampletheme' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nirzarpateltheme' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'sampletheme' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'nirzarpateltheme' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'sampletheme' ), 'sampletheme', '<a href="http://nirzarpatel.com/">Nirzar Patel</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'nirzarpateltheme' ), 'nirzarpateltheme', '<a href="http://nirzarpatel.com/">Nirzar Patel</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
