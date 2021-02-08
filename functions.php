@@ -97,14 +97,24 @@ if ( ! function_exists( 'nirzarpateltheme_setup' ) ) :
 
 		add_theme_support( 'editor-color-palette', array(
 			array(
-				'name' => esc_attr__( 'Magenta', 'nirzarpateltheme' ),
-				'slug' => 'magenta',
-				'color' => '#a156b4',
+				'name' => esc_attr__( 'Yellow Sun', 'nirzarpateltheme' ),
+				'slug' => 'yellow-sun',
+				'color' => '#ffbb00',
 			),
 			array(
-				'name' => esc_attr__( 'Blue', 'nirzarpateltheme' ),
-				'slug' => 'blue',
-				'color' => '#768496',
+				'name' => esc_attr__( 'Sky Blue', 'nirzarpateltheme' ),
+				'slug' => 'sky-blue',
+				'color' => '#1e93c9',
+			),
+			array(
+				'name' => esc_attr__( 'Red Moon', 'nirzarpateltheme' ),
+				'slug' => 'red-moon',
+				'color' => '#ff5555',
+			),
+			array(
+				'name' => esc_attr__( 'Grass Green', 'nirzarpateltheme' ),
+				'slug' => 'grass-green',
+				'color' => '#8abd05',
 			),
 		) );
 

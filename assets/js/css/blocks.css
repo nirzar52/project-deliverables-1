@@ -17,18 +17,38 @@
     margin: 0 auto;
 }
 
-.has-magenta-background-color {
-    background-color: #313131;
+.has-sky-background-color {
+    background-color: #1e93c9;
 }
 
-.has-magenta-color {
-    color: #f78da7;
+.has-sky-color {
+    color: #1e93c9;
 }
 
-.has-blue-background-color {
-    background-color: #768496;
+.has-yellow-background-color {
+    background-color: #ffbb00;
 }
 
-.has-blue-color {
-    color: #768496;
+.has-yellow-color {
+    color: #ffbb00;
+}
+
+.has-red-background-color {
+    background-color: #ff5555;
+}
+
+.has-red-color {
+    color: #ff5555;
+}
+
+.has-green-background-color {
+    background-color: #8abd05;
+}
+
+.has-green-color {
+    color: #8abd05;
+}
+
+headerText {
+    font-weight: bold;
 }
