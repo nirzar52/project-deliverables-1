@@ -1,7 +1,29 @@
+@font-face{font-family:"Helvetica Now Text";src:url("https://static.rolex.com/Fonts/Rolex/HelveticaNow/8d8e92a7-bfd4-4de7-bc65-45be2306bf81.woff2") format("woff2"), url("https://static.rolex.com/Fonts/Rolex/HelveticaNow/858c1d6a-cfc6-4367-91da-cd8209dcdc6e.woff") format("woff");font-weight:300;font-style:normal;}
+
 * {
     /* margin: 0 !important;
     padding: 0 !important; */
     box-sizing: border-box;
+    transition: all ease 0.2s;
+}
+
+:root {
+    --rolex-green: #006039;
+    --rolex-yellow: #a37e2c;
+}
+
+a {
+    text-decoration: none;
+    color: var(--rolex-yellow) !important;
+}
+
+a:hover {
+    opacity: 0.8 !important;
+    text-decoration: underline;
+}
+
+a li {
+    color: var(--rolex-yellow) !important;
 }
 
 header#masthead {
@@ -9,8 +31,25 @@ header#masthead {
     background-color: #dddddd;
 }
 
-.site-title {
-    padding: 20px !important;
+#primary-menu ul {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#primary-menu ul li {
+    width: 120px;
+}
+
+#primary-menu ul li a {
+    color: var(--rolex-yellow) !important;
+}
+
+#primary-menu ul li a:hover {
+    color: var(--rolex-green) !important;
 }
 
 .entry-title {
@@ -95,21 +134,38 @@ figure {
     text-align: center;
     margin: auto;
 }
-
+/* 
 img {
     width: 400px;
-}
+} */
 
 li {
     list-style: none;
     padding-left: -16px;
 }
 
-ul, ol {
+ul,
+ol {
     margin: 0 !important;
     padding: 0 !important;
 }
 
 input.search-field {
     margin-top: 25px;
+}
+
+img.custom-logo {
+    margin: 20px auto;
+    width: 100px;
+}
+
+.site-title {
+    display: none;
+}
+
+.rolex-fonts {
+    font-family:"Helvetica Now Text";
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
