@@ -1,0 +1,111 @@
+* {
+    /* margin: 0 !important;
+    padding: 0 !important; */
+    box-sizing: border-box;
+}
+
+header#masthead {
+    text-align: center;
+    background-color: #dddddd;
+}
+
+.site-title {
+    padding: 20px !important;
+}
+
+.entry-title {
+    text-align: center;
+}
+
+main {
+    margin: 0 200px !important;
+}
+
+.site-info {
+    background-color: #dddddd;
+    text-align: center;
+}
+
+aside#secondary {
+    padding: 0 100px;
+    background-color: #dddddd;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.wp-block-quote.is-style-fancy-quote {
+    color: red;
+}
+
+.wp-block-buttons .wp-block-button .wp-block-button_link,
+.wp-block-buttons.is-style-fill .wp-block-button .wp-block-button_link {
+    background-color: red;
+}
+
+.alignwide {
+    width: 75%;
+    margin: o auto;
+}
+
+.alignfull {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.has-sky-background-color {
+    background-color: #1e93c9;
+}
+
+.has-sky-color {
+    color: #1e93c9;
+}
+
+.has-yellow-background-color {
+    background-color: #ffbb00;
+}
+
+.has-yellow-color {
+    color: #ffbb00;
+}
+
+.has-red-background-color {
+    background-color: #ff5555;
+}
+
+.has-red-color {
+    color: #ff5555;
+}
+
+.has-green-background-color {
+    background-color: #8abd05;
+}
+
+.has-green-color {
+    color: #8abd05;
+}
+
+.headerText {
+    font-weight: bold;
+}
+
+figure {
+    text-align: center;
+    margin: auto;
+}
+
+img {
+    width: 400px;
+}
+
+li {
+    list-style: none;
+    padding-left: -16px;
+}
+
+ul, ol {
+    margin: 0 !important;
+    padding: 0 !important;
+}
