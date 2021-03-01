@@ -9,7 +9,7 @@
 ?>
 <div class="footer">
 
-<?php
+<?php	
 if ( ! is_active_sidebar( 'sidebar' ) ) {
 	return;
 }
