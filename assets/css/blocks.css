@@ -32,6 +32,7 @@ header#masthead {
 }
 
 #primary-menu ul {
+    padding-bottom: 20px;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -168,4 +169,22 @@ img.custom-logo {
     font-size: 34px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+img.image.wp-image-42.attachment-medium.size-medium {
+    width: 50%;
+}
+
+
+.footer {
+    background-color: #00603a28;
+}
+
+img.wp-post-image {
+    width: 40%;
+}
+
+.post-thumbnail {
+    margin: -10px 0;
+    text-align: center;
 }

@@ -6,7 +6,10 @@
  *
  * @package nirzarpatel_Theme
  */
+?>
+<div class="footer">
 
+<?php
 if ( ! is_active_sidebar( 'sidebar' ) ) {
 	return;
 }

@@ -31,22 +31,12 @@
 				<div class="row">
 					<div class="col-6">
 						<?php
-						the_custom_logo();
-						if (is_front_page() && is_home()) :
+						if(function_exists('the_custom_logo')) {
+							the_custom_logo();
+						} else {
+							bloginfo('name');
+						}
 						?>
-							<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-						<?php
-						else :
-						?>
-							<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-						<?php
-						endif;
-						$nirzarpateltheme_description = get_bloginfo('description', 'display');
-						if ($nirzarpateltheme_description || is_customize_preview()) :
-						?>
-							<p class="site-description"><?php echo $nirzarpateltheme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-														?></p>
-						<?php endif; ?>
 					</div>
 					<div class="col-6">
 						<?php

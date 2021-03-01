@@ -1,5 +1,10 @@
 <?php
+
 /**
+ * Template Name: functions.php
+ * Description: Add features to wordpress theme
+ * 
+ * 
  * Sample Theme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
@@ -7,12 +12,12 @@
  * @package nirzarpatel_Theme
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define('_S_VERSION', '1.0.0');
 }
 
-if ( ! function_exists( 'nirzarpateltheme_setup' ) ) :
+if (!function_exists('nirzarpateltheme_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -20,17 +25,18 @@ if ( ! function_exists( 'nirzarpateltheme_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function nirzarpateltheme_setup() {
+	function nirzarpateltheme_setup()
+	{
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Sample Theme, use a find and replace
 		 * to change 'nirzarpateltheme' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'nirzarpateltheme', get_template_directory() . '/languages' );
+		load_theme_textdomain('nirzarpateltheme', get_template_directory() . '/languages');
 
 		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+		add_theme_support('automatic-feed-links');
 
 		/*
 		 * Let WordPress manage the document title.
@@ -38,19 +44,19 @@ if ( ! function_exists( 'nirzarpateltheme_setup' ) ) :
 		 * hard-coded <title> tag in the document head, and expect WordPress to
 		 * provide it for us.
 		 */
-		add_theme_support( 'title-tag' );
+		add_theme_support('title-tag');
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails' );
+		add_theme_support('post-thumbnails');
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-primary' => esc_html__( 'Primary', 'nirzarpateltheme' ),
+				'menu-primary' => esc_html__('Primary', 'nirzarpateltheme'),
 			)
 		);
 
@@ -58,8 +64,7 @@ if ( ! function_exists( 'nirzarpateltheme_setup' ) ) :
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support(
-			'html5',
+		add_theme_support('html5', 
 			array(
 				'search-form',
 				'comment-form',
@@ -67,20 +72,19 @@ if ( ! function_exists( 'nirzarpateltheme_setup' ) ) :
 				'gallery',
 				'caption',
 				'style',
-				'script',
+				'script'
 			)
 		);
 
 		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
+		add_theme_support('customize-selective-refresh-widgets');
 
 		/**
 		 * Add support for core custom logo.
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support(
-			'custom-logo',
+		add_theme_support('custom-logo',
 			array(
 				'height'      => 250,
 				'width'       => 250,
@@ -90,33 +94,33 @@ if ( ! function_exists( 'nirzarpateltheme_setup' ) ) :
 		);
 
 		// Add support for default block styles
-		add_theme_support( 'wp-block-styles' );
+		add_theme_support('wp-block-styles');
 
 		// Add support for wide allignment
-		add_theme_support( 'align-wide' );
+		add_theme_support('align-wide');
 
-		add_theme_support( 'editor-color-palette', array(
+		add_theme_support('editor-color-palette', array(
 			array(
-				'name' => esc_attr__( 'Yellow Sun', 'nirzarpateltheme' ),
+				'name' => esc_attr__('Yellow Sun', 'nirzarpateltheme'),
 				'slug' => 'yellow-sun',
 				'color' => '#ffbb00',
 			),
 			array(
-				'name' => esc_attr__( 'Sky Blue', 'nirzarpateltheme' ),
+				'name' => esc_attr__('Sky Blue', 'nirzarpateltheme'),
 				'slug' => 'sky-blue',
 				'color' => '#1e93c9',
 			),
 			array(
-				'name' => esc_attr__( 'Red Moon', 'nirzarpateltheme' ),
+				'name' => esc_attr__('Red Moon', 'nirzarpateltheme'),
 				'slug' => 'red-moon',
 				'color' => '#ff5555',
 			),
 			array(
-				'name' => esc_attr__( 'Grass Green', 'nirzarpateltheme' ),
+				'name' => esc_attr__('Grass Green', 'nirzarpateltheme'),
 				'slug' => 'grass-green',
 				'color' => '#8abd05',
 			),
-		) );
+		));
 
 		// Add support for custom gradients
 		add_theme_support(
@@ -124,19 +128,19 @@ if ( ! function_exists( 'nirzarpateltheme_setup' ) ) :
 			array()
 		);
 
-	// Add support for font sizes
-	add_theme_support( 'editor-font-sizes', array());
+		// Add support for font sizes
+		add_theme_support('editor-font-sizes', array());
 
-	// Disable theme supports
-	add_theme_support( 'disable-custom-font-sizes' );
-	add_theme_support( 'disable-custom-colors' );
-	add_theme_support( 'disable-custom-gradients' );
+		// Disable theme supports
+		add_theme_support('disable-custom-font-sizes');
+		add_theme_support('disable-custom-colors');
+		add_theme_support('disable-custom-gradients');
 
-	// Remove core block pattern
-	remove_theme_support( 'core-block-patterns' );
-}
+		// Remove core block pattern
+		remove_theme_support('core-block-patterns');
+	}
 endif;
-add_action( 'after_setup_theme', 'nirzarpateltheme_setup' );
+add_action('after_setup_theme', 'nirzarpateltheme_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -145,22 +149,24 @@ add_action( 'after_setup_theme', 'nirzarpateltheme_setup' );
  *
  * @global int $content_width
  */
-function nirzarpateltheme_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'nirzarpateltheme_content_width', 640 );
+function nirzarpateltheme_content_width()
+{
+	$GLOBALS['content_width'] = apply_filters('nirzarpateltheme_content_width', 640);
 }
-add_action( 'after_setup_theme', 'nirzarpateltheme_content_width', 0 );
+add_action('after_setup_theme', 'nirzarpateltheme_content_width', 0);
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function nirzarpateltheme_widgets_init() {
+function nirzarpateltheme_widgets_init()
+{
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'nirzarpateltheme' ),
+			'name'          => esc_html__('Sidebar', 'nirzarpateltheme'),
 			'id'            => 'sidebar',
-			'description'   => esc_html__( 'Add widgets here.', 'nirzarpateltheme' ),
+			'description'   => esc_html__('Add widgets here.', 'nirzarpateltheme'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -168,28 +174,30 @@ function nirzarpateltheme_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'nirzarpateltheme_widgets_init' );
+add_action('widgets_init', 'nirzarpateltheme_widgets_init');
 
 /**
  * Enqueue scripts and styles.
  */
 
-function nirzarpateltheme_scripts() {
-	wp_enqueue_style( 'nirzarpateltheme-style', get_stylesheet_uri(), array(), _S_VERSION );
+function nirzarpateltheme_scripts()
+{
+	// adding theme icons file
+	wp_enqueue_style('nirzarpateltheme-style', get_stylesheet_uri(), array(), _S_VERSION);
 
 	// added Foundation
-	wp_enqueue_style( 'foundation-style', get_stylesheet_uri(), '/assets/css/vendor/foundation.css' );
-	wp_enqueue_style( 'foundation-script', get_stylesheet_uri(), '/assets/js/vendor/foundations.js', array(), false, true );
+	wp_enqueue_style('foundation-style', get_stylesheet_uri(), '/assets/css/vendor/foundation.css');
+	wp_enqueue_style('foundation-script', get_stylesheet_uri(), '/assets/js/vendor/foundations.js', array(), false, true);
 
 	// Bootstrap
 	// wp_enqueue_style( 'bootstrap-style', get_stylesheet_uri(), '/assets/css/vendor/bootstrap.min.css' );
 	// wp_enqueue_style( 'bootstrap-script', get_stylesheet_uri(), '/assets/js/vendor/bootstrap.min.js', array(), false, true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	if (is_singular() && comments_open() && get_option('thread_comments')) {
+		wp_enqueue_script('comment-reply');
 	}
 }
-add_action( 'wp_enqueue_scripts', 'nirzarpateltheme_scripts' );
+add_action('wp_enqueue_scripts', 'nirzarpateltheme_scripts');
 
 /**
  * Custom template tags for this theme.
@@ -208,21 +216,16 @@ require get_template_directory() . '/inc/customizer.php';
 
 // Enqueuinh block editor assets
 
-function nirzarpateltheme_enqueue_block_editor_assets() {
-    wp_enqueue_script(
-        'editor-script',
-		get_template_directory_uri() . '/assets/js/editor.js',
-		array('wp-blocks','wp-dom-ready','wp-edit-post')
-	);
+function nirzarpateltheme_enqueue_block_editor_assets()
+{
+	wp_enqueue_script('editor-script', get_template_directory_uri() . '/assets/js/editor.js', array('wp-blocks', 'wp-dom-ready', 'wp-edit-post'));
 }
-add_action( 'enqueue_block_editor_assets', 'nirzarpateltheme_enqueue_block_editor_assets' );
+add_action('enqueue_block_editor_assets', 'nirzarpateltheme_enqueue_block_editor_assets');
 
 // Enqueing Block assets
 
-function nirzarpateltheme_enqueue_block_assets() {
-    wp_enqueue_style( 
-		'blocks-style', 
-		get_template_directory_uri() . '/assets/css/blocks.css' 
-	);
+function nirzarpateltheme_enqueue_block_assets()
+{
+	wp_enqueue_style('blocks-style', get_template_directory_uri() . '/assets/css/blocks.css');
 }
-add_action( 'enqueue_block_assets', 'nirzarpateltheme_enqueue_block_assets' );
+add_action('enqueue_block_assets', 'nirzarpateltheme_enqueue_block_assets');
