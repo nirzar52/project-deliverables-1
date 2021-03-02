@@ -240,4 +240,8 @@ add_action('enqueue_block_assets', 'nirzarpateltheme_enqueue_block_assets');
 
 function my_account_menu_order()
 {
-	
+	$menuOrder = array(
+		'dashboard'       => __('Dashboard', 'woocommerce'),
+	);
+	return $menuOrder;
+}
