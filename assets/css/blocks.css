@@ -211,3 +211,7 @@ img.wp-post-image {
     color: var(--rolex-green);
     text-decoration: none;
 }
+
+.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
+    background-color: var(--rolex-green);
+}
