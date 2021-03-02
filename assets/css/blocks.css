@@ -212,6 +212,11 @@ img.wp-post-image {
     text-decoration: none;
 }
 
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+    background-color: var(--rolex-green) !important;
+}
+
 .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
-    background-color: var(--rolex-green);
+    background-color: var(--rolex-green) !important;
+    opacity: 0.7;
 }
