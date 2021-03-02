@@ -245,6 +245,7 @@ function my_account_menu_order()
 		'orders'          => __('Orders', 'woocommerce'),
 		'downloads'       => __('Download', 'woocommerce'),
 		'edit-address'    => __('Addresses', 'woocommerce'),
+		'edit-account'    => __('Account Details', 'woocommerce'),
 	);
 	return $menuOrder;
 }
