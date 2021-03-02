@@ -242,6 +242,7 @@ function my_account_menu_order()
 {
 	$menuOrder = array(
 		'dashboard'       => __('Dashboard', 'woocommerce'),
+		'orders'          => __('Orders', 'woocommerce'),
 	);
 	return $menuOrder;
 }
