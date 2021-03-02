@@ -1,5 +1,8 @@
 @font-face{font-family:"Helvetica Now Text";src:url("https://static.rolex.com/Fonts/Rolex/HelveticaNow/8d8e92a7-bfd4-4de7-bc65-45be2306bf81.woff2") format("woff2"), url("https://static.rolex.com/Fonts/Rolex/HelveticaNow/858c1d6a-cfc6-4367-91da-cd8209dcdc6e.woff") format("woff");font-weight:300;font-style:normal;}
 
+/* font-family: 'Syncopate', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
+
 * {
     /* margin: 0 !important;
     padding: 0 !important; */
@@ -10,11 +13,12 @@
 :root {
     --rolex-green: #006039;
     --rolex-yellow: #a37e2c;
+    --rolex-wide-fonts: font-family: 'Syncopate', sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: var(--rolex-yellow) !important;
+    color: var(--rolex-yellow);
 }
 
 a:hover {
@@ -187,4 +191,23 @@ img.wp-post-image {
 .post-thumbnail {
     margin: -10px 0;
     text-align: center;
+}
+
+.wp-block-cover__inner-container {
+    text-align: center;
+}
+
+.wp-block-cover__inner-container p {
+    font-family: var(--rolex-wide-fonts);
+}
+
+.wp-block-button__link{
+    background-color: #fff;
+    color: var(--rolex-green);
+}
+
+.wp-block-button__link:hover {
+    opacity: 0.7;
+    color: var(--rolex-green);
+    text-decoration: none;
 }

@@ -64,7 +64,8 @@ if (!function_exists('nirzarpateltheme_setup')) :
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support('html5', 
+		add_theme_support(
+			'html5',
 			array(
 				'search-form',
 				'comment-form',
@@ -84,7 +85,8 @@ if (!function_exists('nirzarpateltheme_setup')) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support('custom-logo',
+		add_theme_support(
+			'custom-logo',
 			array(
 				'height'      => 250,
 				'width'       => 250,
@@ -229,3 +231,13 @@ function nirzarpateltheme_enqueue_block_assets()
 	wp_enqueue_style('blocks-style', get_template_directory_uri() . '/assets/css/blocks.css');
 }
 add_action('enqueue_block_assets', 'nirzarpateltheme_enqueue_block_assets');
+
+
+
+/**
+ * Edit my account menu order
+ */
+
+function my_account_menu_order()
+{
+	
