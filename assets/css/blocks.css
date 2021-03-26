@@ -1,16 +1,12 @@
 @font-face{font-family:"Helvetica Now Text";src:url("https://static.rolex.com/Fonts/Rolex/HelveticaNow/8d8e92a7-bfd4-4de7-bc65-45be2306bf81.woff2") format("woff2"), url("https://static.rolex.com/Fonts/Rolex/HelveticaNow/858c1d6a-cfc6-4367-91da-cd8209dcdc6e.woff") format("woff");font-weight:300;font-style:normal;}
 
-/* font-family: 'Syncopate', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
 
 * {
-    /* margin: 0 !important;
-    padding: 0 !important; */
     box-sizing: border-box;
     outline: none;
     transition: all ease 0.3s;
 }
-
 :root {
     --rolex-green: #006039;
     --rolex-yellow: #a37e2c;
@@ -67,13 +63,13 @@ main {
 }
 
 .site-info {
-    background-color: #dddddd;
+    background-color: transparent;
     text-align: center;
 }
 
 aside#secondary {
     padding: 0 100px;
-    background-color: #dddddd;
+    background-color: transparent;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
@@ -139,11 +135,24 @@ aside#secondary {
 figure {
     text-align: center;
     margin: auto;
-}
-/* 
+} */
+
+
+
+
+/* ==------------------------------------------- */
+/* ==------------------------------------------- */
+/* ==------------------------------------------- */
+
 img {
     width: 400px;
-} */
+}
+/* ==------------------------------------------- */
+/* ==------------------------------------------- */
+/* ==------------------------------------------- */
+
+
+
 
 li {
     list-style: none;
@@ -181,10 +190,6 @@ img.image.wp-image-42.attachment-medium.size-medium {
     width: 50%;
 }
 
-
-.footer {
-    background-color: #00603a28;
-}
 
 
 .post-thumbnail {

@@ -216,6 +216,16 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+/**
+ * Woocommerce additions.
+ */
+require get_template_directory() . '/inc/woocommerce.php';
+
+/**
+ * Custom post types additions.
+ */
+require get_template_directory() . '/inc/post-types.php';
+
 // Enqueuinh block editor assets
 
 function nirzarpateltheme_enqueue_block_editor_assets()
@@ -252,3 +262,20 @@ function my_account_menu_order()
 }
 
 add_filter('woocommerce_account_menu_items', 'my_account_menu_order');
+
+
+
+function nirzarpateltheme_posttype() {
+	register_post_type('histories',
+		array(
+			'labels' => array(
+				'name' => __('Histories'),
+				'singular_name' => __('History')
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array('slug' => 'histories'),
+		)
+		);
+}
+add_action('init', 'nirzarpateltheme_posttype');

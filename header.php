@@ -21,7 +21,8 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body class="grid-container"                                                          bv <?php body_class(); ?>>
+
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'nirzarpateltheme'); ?></a>
@@ -60,4 +61,4 @@
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->
 
-		<div class="container">
+		<div class="container grid-container">
